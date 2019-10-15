@@ -1,14 +1,16 @@
 import numpy as np
 
 def integral(func, start, end, precise, y_method):
-    # Args:
-    #   func: A str representing f(x)
-    #   start: The start point of x to calculate integral
-    #   end: The end point of x to calculate integral
-    #   precise: A int indicting the precision of calculation
-    #   y_method: A str, left or right, which decide which side of function value we use.
-    # Return: The value of integral
-
+    “”“
+    Desc: Calculate integral of 1 dimensional function
+    Parameters:
+        func: A str representing f(x)
+        start: The start point of x to calculate integral
+        end: The end point of x to calculate integral
+        precise: A int indicting the precision of calculation
+        y_method: A str, left or right, which decide which side of function value we use
+    Return: The value of integral
+    ”“”
     if end < start:
         raise Exception("start must smaller than end")
 
@@ -29,11 +31,12 @@ def integral(func, start, end, precise, y_method):
     return result
 
 def derivative(func, point, precise):
-    # Args:
-    #   func: func: A str representing f(x)
-    #   point: A number indicating the point to solve derivative
-    #   precise: A number indicating the precision of calculation
-
+    """
+    Parameters:
+       func: func: A str representing f(x)
+       point: A number indicating the point to solve derivative
+       precise: A number indicating the precision of calculation
+    """
     delta = 10**(-precise)
     x1 = point - delta
     x2 = point + delta
