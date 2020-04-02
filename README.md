@@ -1,2 +1,2 @@
 # Calculus
-Achieve some classical functions of calculus
+Achieve some classical functions of calculus and math tricks
